@@ -1,0 +1,125 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #fc6caf, #ff1a85); 
+    color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease;
+}
+
+.navbar .logo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #ff7b00;
+}
+
+.active {
+    border-bottom: 2px solid #ff7b00;
+}
+
+.habilidades-section {
+    padding-top: 150px;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.habilidades-section h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    color: #fff;
+    text-shadow: 2px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeInDown 1s ease;
+}
+
+@keyframes fadeInDown {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+
+.habilidades-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.habilidade-box {
+    flex: 1;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.habilidade-box h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #ff7b00;
+}
+
+.habilidade-box p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.habilidade-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .habilidades-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .habilidade-box {
+        margin-bottom: 20px;
+    }
+}
